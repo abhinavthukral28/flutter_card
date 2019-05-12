@@ -11,35 +11,72 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
       backgroundColor: Colors.teal,
       body: SafeArea(
-          child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Container(
-            color: Colors.red,
-            width: 100.0,
+          CircleAvatar(
+            backgroundImage: AssetImage('images/abhinav.jpg'),
+            radius: 50.0,
+            backgroundColor: Colors.red,
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.yellow,
+          Text(
+            'Abhinav Thukral',
+            style: TextStyle(
+                fontSize: 40,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Pacifico'),
+          ),
+          Text(
+            'FLUTTER DEVELOPER',
+            style: TextStyle(
+              fontSize: 20,
+              letterSpacing: 2.5,
+              color: Colors.white,
+              fontFamily: 'Source-Sans-Pro',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(
+            width: 150.0,
+            height: 20.0,
+            child: Divider(
+              color: Colors.teal.shade50,
+            ),
+          ),
+          Card(
+            margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+            child: ListTile(
+              leading: Icon(
+                Icons.phone,
+                color: Colors.teal,
               ),
-              Opacity(
-                opacity: 0.5,
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.yellow,
+              title: Text(
+                '+91 98976-417-470',
+                style: TextStyle(
+                  color: Colors.teal.shade900,
+                  fontSize: 20.0,
+                  fontFamily: 'Source-Sans-Pro',
                 ),
-              )
-            ],
+              ),
+            ),
           ),
-          Container(
-            color: Colors.blue,
-            width: 100,
+          Card(
+            margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+            child: ListTile(
+              leading: Icon(
+                Icons.email,
+                color: Colors.teal,
+              ),
+              title: Text(
+                'abhinav@brightland.org',
+                style: TextStyle(
+                  color: Colors.teal.shade900,
+                  fontSize: 20.0,
+                  fontFamily: 'Source-Sans-Pro',
+                ),
+              ),
+            ),
           ),
         ],
       )),
